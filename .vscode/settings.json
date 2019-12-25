@@ -66,6 +66,8 @@
         "REGION_RU864":"OFF"
     },
     "files.associations": {
-        "board-config.h": "c"
+        "board-config.h": "c",
+        "uart.h": "c",
+        "stm32l0xx.h": "c"
     }
 }
