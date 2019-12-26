@@ -1,3 +1,6 @@
+# Fork of LoRaMac-node
+This is a fork of the Semtech LoRaMac-node repo with support for my custom LoRaWAN-Feather board.  See the board on [Hackaday.io]https://hackaday.io/project/168527-lorawan-feather.  Hardware repo is [here]https://github.com/svcguy/LoRaWAN-Feather-Hardware
+
 # LoRaWAN endpoint stack implementation and example projects
 
       ______                              _
