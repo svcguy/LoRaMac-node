@@ -145,7 +145,7 @@ void BoardInitMcu( void )
         FifoInit( &Uart2.FifoRx, Uart2RxBuffer, UART2_FIFO_RX_SIZE );
         // Configure your terminal for 8 Bits data (7 data bit + 1 parity bit), no parity and no flow ctrl
         UartInit( &Uart2, UART_2, UART_TX, UART_RX );
-        UartConfig( &Uart2, RX_TX, 19200, UART_8_BIT, UART_1_STOP_BIT, NO_PARITY, NO_FLOW_CTRL );
+        UartConfig( &Uart2, RX_TX, 9600, UART_8_BIT, UART_1_STOP_BIT, NO_PARITY, NO_FLOW_CTRL );
 
         RtcInit( );
 
@@ -468,6 +468,9 @@ void assert_failed( uint8_t* file, uint32_t line )
 
     printf( "Wrong parameters value: file %s on line %lu\r\n", ( const char* )file, line );
     /* Infinite loop */
+
+    __BKPT(0);
+
     while( 1 )
     {
     }

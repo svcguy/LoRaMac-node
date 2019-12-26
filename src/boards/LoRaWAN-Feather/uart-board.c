@@ -160,8 +160,8 @@ void UartMcuConfig( Uart_t *obj, UartMode_t mode, uint32_t baudrate, WordLength_
             assert_param( FAIL );
         }
 
-        HAL_NVIC_SetPriority( USART2_IRQn, 1, 0 );
-        HAL_NVIC_EnableIRQ( USART2_IRQn );
+        HAL_NVIC_SetPriority( RNG_LPUART1_IRQn, 1, 0 );
+        HAL_NVIC_EnableIRQ( RNG_LPUART1_IRQn );
 
         /* Enable the UART Data Register not empty Interrupt */
         HAL_UART_Receive_IT( &UartHandle, &RxData, 1 );
